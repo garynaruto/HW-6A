@@ -8,11 +8,9 @@ public class A6{
 		QuestionComposite ch1 = new QuestionComposite();
 		ch1.add(new Question("A1"));
 		ch1.add(new Question("A2"));
-		
 		QuestionComposite ch2 = new QuestionComposite();
 		ch2.add(new Question("B1"));
 		ch2.add(new Question("B2"));
-		
 		QuestionComposite all = new QuestionComposite();
 		all.add(title);
 		all.add(ch1);
