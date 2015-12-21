@@ -3,33 +3,31 @@ import java.util.ArrayList;
 
 public class A6{
 	public static void main(String[] args){
-		Question logo = new Question("aaa");
+		Question title = new Question("Question 1");
         
-		
-		
-        Playlist playlist1 = new Playlist();
-        playlist1.add(new Question("Duke ек┤здт"));
-        playlist1.add(new Question("Duke еk┤здт"));
+		QuestionComposite ch1 = new QuestionComposite();
+        ch1.add(new Question("A1"));
+        ch1.add(new Question("A2"));
         
-        Playlist playlist2 = new Playlist();
-        playlist2.add(new Question("Duke илек╕}"));
-        playlist2.add(new Question("Duke илеk╕}"));
+        QuestionComposite ch2 = new QuestionComposite();
+        ch2.add(new Question("B1"));
+        ch2.add(new Question("B2"));
         
-        Playlist all = new Playlist();
-        all.add(logo);
-        all.add(playlist1);
-        all.add(playlist2);
+        QuestionComposite all = new QuestionComposite();
+        all.add(title);
+        all.add(ch1);
+        all.add(ch2);
         
         all.print();
     }
 }
-interface Printable {
+interface Printable{
     void  print();
 }
 
-class Question implements Printable {
+class Question implements Printable{
     private String description;
-    Question(String image) {
+    Question(String image){
         this.description = image;
     }
     public void print(){
@@ -37,14 +35,14 @@ class Question implements Printable {
     }
 }
 
-class Playlist implements Printable {
+class QuestionComposite implements Printable{
     private ArrayList<Printable> list = new ArrayList<Printable>();
     public void add(Printable p) {
         list.add(p);
     }
     public void print(){
         for(Printable p : list) {
-            p.print() ;
+            p.print();
         }
     }
 }
