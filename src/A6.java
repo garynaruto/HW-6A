@@ -24,7 +24,6 @@ public class A6{
 interface Printable{
     void  print();
 }
-
 class Question implements Printable{
     private String description;
     Question(String image){
@@ -34,7 +33,6 @@ class Question implements Printable{
         System.out.println(description);
     }
 }
-
 class QuestionComposite implements Printable{
     private ArrayList<Printable> list = new ArrayList<Printable>();
     public void add(Printable p) {
