@@ -26,8 +26,8 @@ interface Printable{
 }
 class Question implements Printable{
     private String description;
-    Question(String image){
-        this.description = image;
+    Question(String s){
+        this.description = s;
     }
     public void print(){
         System.out.println(description);
